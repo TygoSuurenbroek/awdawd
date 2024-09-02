@@ -1,0 +1,151 @@
+/* ../styles/AboutUs.module.css */
+
+.aboutUsSection {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(10, 25, 47, 0.98) 100%);
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: none;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.leftColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightColumn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlightTitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.highlightText {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1em;
+    line-height: 1.6;
+    position: relative;
+}
+
+.cardTextSection {
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: none;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.cardText {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.highlight {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.partnerLink {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.partnerLink:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.floatingIcons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.iconWrapper {
+    position: absolute;
+    opacity: 0.2;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    font-size: 5rem;
+    /* Base size */
+    animation: floatIcon 6s infinite ease-in-out;
+}
+
+.iconWrapper:hover {
+    transform: scale(1.2);
+}
+
+.icon1 {
+    top: 20%;
+    left: 10%;
+    font-size: 8rem;
+    /* Larger icon */
+    animation-duration: 8s;
+}
+
+.icon2 {
+    top: 60%;
+    right: 15%;
+    font-size: 7rem;
+    animation-duration: 10s;
+}
+
+.icon3 {
+    bottom: 30%;
+    left: 20%;
+    font-size: 6rem;
+    animation-duration: 7s;
+}
+
+.icon4 {
+    bottom: 10%;
+    right: 10%;
+    font-size: 9rem;
+    /* Largest icon */
+    animation-duration: 12s;
+}
+
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-10px) translateX(10px);
+    }
+}

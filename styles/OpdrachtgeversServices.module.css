@@ -1,0 +1,143 @@
+.servicesSection {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(56, 142, 60, 0.98) 100%);
+    color: #003366;
+    /* Navy blue text */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sectionTitle {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+    /* Keep the title white */
+    line-height: 1.2;
+}
+
+.servicesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.serviceCard {
+    background-color: transparent;
+    /* Fully transparent background */
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: none;
+    /* Remove box-shadow for full transparency */
+    position: relative;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotate(calc(var(--rotation, 0) * 1deg));
+    transition: transform 0.3s ease;
+    color: #ffffff;
+    /* White text for contrast against the background */
+}
+
+.serviceCard:nth-child(1) {
+    --rotation: -3;
+}
+
+.serviceCard:nth-child(2) {
+    --rotation: 3;
+}
+
+.serviceCard:nth-child(3) {
+    --rotation: -2;
+}
+
+.serviceIcon {
+    font-size: 3rem;
+    color: #ffffff;
+    /* White icons for contrast */
+    margin-bottom: 1rem;
+}
+
+.serviceTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.serviceDescription {
+    font-size: 1rem;
+    color: #ffffff;
+    /* White text for contrast */
+    margin-bottom: auto;
+}
+
+.serviceLabel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffd700;
+    color: #003366;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    transform: rotate(-5deg);
+    animation: floatLabel 3s ease-in-out infinite;
+}
+
+@keyframes floatLabel {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-5deg) translateY(-5px);
+    }
+}
+
+.moreInfoButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: #ffffff;
+    /* White button text */
+    border: 2px solid #ffffff;
+    /* White border */
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.moreInfoButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateX(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .servicesContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .serviceCard {
+        max-width: 100%;
+    }
+}

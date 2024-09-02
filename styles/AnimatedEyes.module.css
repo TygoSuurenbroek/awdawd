@@ -1,0 +1,112 @@
+.eyesContainer {
+    display: flex;
+    gap: 40px;
+}
+
+.eyeContainer {
+    width: 200px;
+    height: 120px;
+    position: relative;
+}
+
+.eye {
+    width: 100%;
+    height: 100%;
+    border-radius: 60% / 80%;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.iris {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at 40% 40%, #4a90e2, #1c4c8c);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.pupil {
+    width: 50%;
+    height: 50%;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lightReflection {
+    width: 20%;
+    height: 20%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    filter: blur(2px);
+}
+
+.lightReflectionSmall {
+    width: 10%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.eyelidUpper,
+.eyelidLower {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #f0f0f0;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.eyelidUpper {
+    top: -50%;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    animation: blinkUpper 4s infinite;
+}
+
+.eyelidLower {
+    bottom: -50%;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    animation: blinkLower 4s infinite;
+}
+
+@keyframes blinkUpper {
+
+    0%,
+    95%,
+    100% {
+        top: -50%;
+    }
+
+    97% {
+        top: 0;
+    }
+}
+
+@keyframes blinkLower {
+
+    0%,
+    95%,
+    100% {
+        bottom: -50%;
+    }
+
+    97% {
+        bottom: 0;
+    }
+}

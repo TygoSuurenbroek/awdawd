@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align content to the top */
+    align-items: center;
+    margin: 4rem auto 0 auto;
+    /* Added a little margin at the top */
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    /* Removed white background */
+}
+
+
+.slogan {
+    font-size: 2.5rem;
+    /* Consistent with other sections */
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    /* Adjusted margins to control spacing */
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.process {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.step {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: skew(-20deg) translateX(50%);
+}
+
+.circle:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.approachIcon {
+    font-size: 80px;
+    /* Doubled the icon size */
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.circle:hover .approachIcon {
+    transform: scale(1.5);
+    /* Icon grows on hover */
+}
+
+.textContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(40px) scale(0.9);
+    width: 360px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.step:hover .textContainer,
+.textContainer:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(40px) scale(1);
+}
+
+.text {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--zzp-color-start), var(--loondienst-color-end));
+}
+
+.text::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgba(255, 255, 255, 0.95);
+}
+
+.textDescription {
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+.textDescription em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.moreInfoBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.moreInfoBtn:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Updated Color customization for the icon backgrounds */
+.circle:nth-child(1) {
+    background-color: #333a56;
+    /* Deep Navy */
+}
+
+.circle:nth-child(2) {
+    background-color: #444b6e;
+    /* Slate */
+}
+
+.circle:nth-child(3) {
+    background-color: #566180;
+    /* Steel Blue */
+}
+
+.circle:nth-child(4) {
+    background-color: #68718c;
+    /* Light Slate Blue */
+}
+
+.circle:nth-child(5) {
+    background-color: #7b8aa1;
+    /* Muted Grayish Blue */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .process {
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .step {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        margin: 0 1rem 0 0;
+    }
+
+    .approachIcon {
+        font-size: 70px;
+        /* Adjusted for mobile */
+    }
+
+    .circle:hover .approachIcon {
+        transform: scale(1.5);
+        /* Icon grows on hover */
+    }
+
+    .textContainer {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        width: calc(100% - 80px);
+        text-align: left;
+    }
+
+    .text {
+        margin-top: 0;
+        padding: 10px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .text::before,
+    .text::after {
+        display: none;
+    }
+
+    .textDescription {
+        font-size: 0.9em;
+    }
+
+    .moreInfoBtn {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+
+    /* Ensure textContainer is always visible on mobile */
+    .textContainer {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    /* Remove hover effects that hide text containers */
+    .step:hover .textContainer {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}

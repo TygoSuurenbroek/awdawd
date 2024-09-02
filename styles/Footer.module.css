@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.footer {
+    background-color: rgba(10, 25, 47, 0.98);
+    color: var(--text-color);
+    padding: 4rem 0 3rem;
+    /* Added more padding to the top */
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footerSection {
+    flex: 1;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footerSection:last-child {
+    margin-right: 0;
+}
+
+.footerSection h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footerSection ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerSection ul li {
+    margin-bottom: 0.7rem;
+}
+
+.footerSection ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerSection ul li a:hover {
+    color: var(--accent-color);
+}
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.socialIcons a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+    color: var(--accent-color);
+}
+
+.emphasizedIcon {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.emphasizedIcon:hover {
+    color: var(--button-hover-color);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-color);
+}
+
+/* Banner Styles */
+.bannerContainer {
+    position: relative;
+    /* Place the banner within the footer, not fixed */
+    width: 100%;
+    height: 40px;
+    /* Height of the banner */
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    /* Adds space below the banner */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+.bannerText {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 40px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}

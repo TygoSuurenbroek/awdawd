@@ -1,0 +1,20 @@
+.blobContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(40px);
+    opacity: 0.7;
+    z-index: -1;
+    /* Make sure the blobs are behind all content */
+    pointer-events: none;
+    /* Prevent the blobs from interfering with user interactions */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    transition: all 0.3s ease-out;
+}

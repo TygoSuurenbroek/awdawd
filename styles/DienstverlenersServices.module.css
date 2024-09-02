@@ -1,0 +1,102 @@
+.servicesSection {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    color: var(--primary-color);
+    /* Change to navy blue text */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sectionTitle {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    /* Change to navy blue text */
+    line-height: 1.2;
+}
+
+.servicesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.serviceCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.serviceIcon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    /* Yellow color */
+    margin-bottom: 1rem;
+}
+
+.serviceTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    /* Change to navy blue text */
+}
+
+.serviceDescription {
+    font-size: 1rem;
+    color: var(--primary-color);
+    /* Change to navy blue text */
+    margin-bottom: auto;
+}
+
+.moreInfoButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: var(--primary-color);
+    /* Button text color navy blue */
+    border: 2px solid var(--accent-color);
+    /* Yellow border */
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.moreInfoButton:hover {
+    background-color: var(--accent-color);
+    /* Fill yellow on hover */
+    color: var(--primary-color);
+    /* Navy blue text on hover */
+    border-color: var(--accent-color);
+    transform: translateX(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .servicesContainer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .serviceCard {
+        max-width: 100%;
+    }
+}

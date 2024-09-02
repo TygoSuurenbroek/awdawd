@@ -1,0 +1,122 @@
+.slideshowContainer {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    /* Removed the white background */
+    margin: 0 auto;
+}
+
+.slideshowText {
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    /* Navy blue text */
+}
+
+.slideshowText h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    /* Navy blue text */
+}
+
+.slideshowText p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    /* Navy blue text */
+    max-width: 600px;
+    margin: 10px auto 0;
+    line-height: 1.6;
+}
+
+.serviceSlideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+    /* Removed the white background */
+}
+
+.slideshowItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    /* Navy blue text */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+}
+
+.slideshowItem.active {
+    opacity: 1;
+}
+
+.slideshowIcon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    /* Navy blue icon */
+}
+
+.slideshowText {
+    font-size: 1.4rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slideshowContainer {
+        padding: 40px 15px;
+    }
+
+    .slideshowText h2 {
+        font-size: 2rem;
+    }
+
+    .slideshowText p {
+        font-size: 1rem;
+    }
+
+    .serviceSlideshow {
+        height: 200px;
+    }
+
+    .slideshowIcon {
+        font-size: 36px;
+    }
+
+    .slideshowText {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshowText h2 {
+        font-size: 1.8rem;
+    }
+
+    .slideshowText p {
+        font-size: 0.9rem;
+    }
+
+    .serviceSlideshow {
+        height: 180px;
+    }
+
+    .slideshowIcon {
+        font-size: 28px;
+    }
+
+    .slideshowText {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.banner-container {
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    /* Navy blue text */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.banner-container h1 {
+    font-size: 2.5em;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.banner-container .power-line {
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, green, var(--primary-color));
+    /* Green to Navy Blue */
+    margin: 20px auto;
+    animation: growLine 1.5s forwards 1.5s, pulsate 2s infinite 3s;
+}
+
+.banner-container .upper-line,
+.banner-container .lower-line {
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    /* Navy Blue */
+    animation: growLine 1.5s forwards, moveLine 3s infinite;
+}
+
+.banner-container .upper-line {
+    margin-bottom: 10px;
+    /* Space between the upper line and the text */
+}
+
+.banner-container .lower-line {
+    margin-top: 10px;
+    /* Space between the lower line and the text */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes growLine {
+    to {
+        width: 200px;
+    }
+}
+
+@keyframes pulsate {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.1);
+    }
+}
+
+@keyframes moveLine {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+.spark {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    filter: blur(1px);
+    opacity: 0;
+}

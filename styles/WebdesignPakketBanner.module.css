@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.packageBanner {
+    background: linear-gradient(135deg, var(--primary-color), #003366);
+    padding: 6rem 3rem;
+    /* Double the padding to increase the height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 31, 63, 0.2);
+    margin-bottom: 2rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-radius: 0;
+    max-width: none;
+    min-height: 400px;
+    /* Ensure the section has a significant height */
+}
+
+.bannerContent {
+    flex: 1;
+    z-index: 2;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-right: 1rem;
+    /* Reduce margin to bring content closer to the sun */
+    max-width: 45%;
+    /* Adjust max-width to ensure content doesn't stretch too wide */
+}
+
+.bannerTitle {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.bannerDescription {
+    font-size: 1.1rem;
+    color: #B0E0E6;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.bannerCta {
+    display: inline-block;
+    background-color: transparent;
+    /* Initially transparent */
+    color: #ffd700;
+    padding: 0.8rem 2rem;
+    border: 2px solid #ffd700;
+    /* Add a border with the accent color */
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.3);
+}
+
+.bannerCta:hover {
+    transform: translateY(-3px);
+    background-color: #ffd700;
+    /* Filled background on hover */
+    color: #003366;
+    /* Change text color on hover */
+    box-shadow: 0 8px 20px rgba(241, 196, 15, 0.4);
+}
+
+.bannerImage {
+    flex: 0 0 200px;
+    /* Reduce size to bring sun closer to text */
+    height: 200px;
+    position: relative;
+    z-index: 2;
+    margin-left: 1rem;
+    /* Reduce margin to bring image closer to text */
+    text-align: right;
+}
+
+.bannerImage svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sun and cloud animations (no changes needed) */
+
+@keyframes sunbeam1 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes sunbeam2 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes sunbeam3 {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.sunbeam1 {
+    animation: sunbeam1 4s ease-in-out infinite;
+    transform-origin: center;
+    animation-delay: 0s;
+}
+
+.sunbeam2 {
+    animation: sunbeam2 4s ease-in-out infinite;
+    transform-origin: center;
+    animation-delay: 0.5s;
+}
+
+.sunbeam3 {
+    animation: sunbeam3 4s ease-in-out infinite;
+    transform-origin: center;
+    animation-delay: 1s;
+}
+
+@keyframes sunpulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.sun {
+    animation: sunpulse 4s ease-in-out infinite;
+}
+
+@keyframes cloudmove {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.cloud {
+    animation: cloudmove 8s ease-in-out infinite;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+}
+
+.cloud1 {
+    animation-delay: 1s;
+    opacity: 0.7;
+}
+
+.cloud2 {
+    animation-delay: 2s;
+    opacity: 0.5;
+}
+
+.cloud3 {
+    animation-delay: 3s;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .packageBanner {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+        /* Increase padding for better height on mobile */
+    }
+
+    .bannerContent {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .bannerImage {
+        margin-top: 2rem;
+        flex: 0 0 200px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .bannerTitle {
+        font-size: 2rem;
+    }
+
+    .bannerDescription {
+        font-size: 1rem;
+    }
+
+    .bannerCta {
+        font-size: 1rem;
+    }
+}
